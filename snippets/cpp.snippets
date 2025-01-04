@@ -1,0 +1,41 @@
+extends c
+
+snippet base
+	#ifdef ONPC
+	#define _GLIBCXX_DEBUG
+	#endif
+	#include <bits/stdc++.h>
+	#define sz(a) ((int)((a).size()))
+
+	using namespace std;
+
+	class Solution{
+		public:
+			int solve (vector<int> arr, int &size){
+				
+			}
+	};
+
+	int main(){
+		int T;
+		cin >> T;
+
+		for (int i = 1; i <= T; i++){
+			#ifdef ONPC
+			cout << "Test case #" << i << endl;
+			#endif
+
+			#ifdef ONPC
+			cout << "Input : " ;
+			#endif
+
+			Solution ob;
+			int result = ob.solve(arr, n);
+			#ifdef ONPC
+			cout << "Result = " << result << endl;
+			#endif
+			#ifndef ONPC
+			cout << result << endl;
+			#endif
+		}
+	}
