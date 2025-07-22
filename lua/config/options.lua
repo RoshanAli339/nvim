@@ -41,3 +41,4 @@ vim.g.tex_IgnoredWarnings = table.concat({
 
 vim.g.Tex_IgnoreLevel = 8
 vim.g.vimtex_quickfix_enabled = 1
+vim.g.NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
