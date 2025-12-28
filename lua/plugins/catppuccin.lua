@@ -46,11 +46,12 @@ return {
   specs = {
     {
       "akinsho/bufferline.nvim",
+      after = "catppuccin",
       optional = true,
-      opts = function(_, opts)
-        if (vim.g.colors_name or ""):find("catppuccin") then
-          opts.highlights = require("catppuccin.groups.integrations.bufferline").get()
-        end
+      config = function()
+        require("bufferline").setup({
+          highlights = require("catppuccin.special.bufferline").get_theme(),
+        })
       end,
     },
   },

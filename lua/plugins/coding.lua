@@ -14,6 +14,11 @@ return {
       "L3MON4D3/LuaSnip", -- Snippet engine
       "saadparwaiz1/cmp_luasnip", -- Snippet source
     },
+    opts = function(_, opts)
+      opts.sorting = opts.sorting or {}
+      opts.sorting.comparators = opts.sorting.comparators or {}
+      table.insert(opts.sorting.comparators, 1, require("clangd_extensions.cmp_scores"))
+    end,
     config = function()
       local cmp = require("cmp")
       cmp.setup({
